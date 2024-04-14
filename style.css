@@ -320,3 +320,60 @@ main {
 /* User icon adjustments for different devices could be added here */
 /* ... */
 
+
+.form-container {
+    background: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-container h2 {
+    color: #333;
+    text-align: center;
+}
+
+.form-container p {
+    text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-top: 10px;
+}
+
+.form-container select {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form-container textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 100px;
+}
+
+.form-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #017BA0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: darken(#017BA0, 10%);
+}

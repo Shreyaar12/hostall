@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ... other head elements ... -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostall - Potential Roommates</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Hostall</h1>
+    <!--         <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Mess menu</a>
+            <a href="#">Find Roommates</a>
+            <a href="#">Lost & Found</a>
+        </nav> -->
+    <nav id="navbar">
+      <button id="mobileMenuToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="navLinks">
+        <a href="#">Dashboard</a>
+        <a href="#">Mess menu</a>
+        <a href="#">Find Roommates</a>
+        <a href="#">Lost & Found</a>
+      </div>
+    </nav>
+    <div class="user-icon">
+      <i class="fas fa-user"></i> <!-- This is the Font Awesome User Icon -->
+    </div>
+  </header>
+  <!-- ... existing HTML ... -->
+<div class="form-container">
+    <h2>Roommate Preference Form</h2>
+    <p>Enter preferences for your roommate</p>
+    <form id="preferenceForm">
+        <label for="roomType">Type of room Preferred</label>
+        <select id="roomType" name="roomType">
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+            <!-- Add more options as needed -->
+        </select>
+        
+        <label for="roommateNumber">Number of Roommates Preferred</label>
+        <select id="roommateNumber" name="roommateNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <!-- Add more options as needed -->
+        </select>
+        
+        <label for="branchPreference">Branch Preference</label>
+        <select id="branchPreference" name="branchPreference">
+            <option value="cse">Computer Science</option>
+            <option value="ee">Electrical Engineering</option>
+            <!-- Add more options as needed -->
+        </select>
+        
+        <label for="classSlot">Classes Slot Preferred</label>
+        <select id="classSlot" name="classSlot">
+            <option value="morning">Morning</option>
+            <option value="evening">Evening</option>
+            <!-- Add more options as needed -->
+        </select>
+        
+        <label for="additionalPreferences">Additional Preferences</label>
+        <textarea id="additionalPreferences" name="additionalPreferences" placeholder="Submit Your Preferences for Mess, Sleep timings, Mother tongue etc."></textarea>
+        
+        <button type="submit">Submit →</button>
+    </form>
+</div>
+
+    <script>
+      // Toggle mobile menu
+    </script>
+
+</body>
+
+</html>
