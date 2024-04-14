@@ -1,0 +1,322 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F7; /* This color should be the background of the page */
+}
+
+header {
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+}
+
+header h1 {
+    /* Applying the linear gradient to the 'Hostall' title */
+    background: linear-gradient(to right, #017BA0, #015E7A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #354242;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.user-icon {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: #D9D9D9; /* Placeholder if no icon provided */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the image stays within the bounds of the circle */
+}
+
+.user-icon img {
+    display: block;
+    width: 80%; /* Maintain the aspect ratio of the image */
+    height: 90%; /* Adjust based on your icon's aspect ratio */
+}
+
+main {
+    padding: 20px;
+}
+
+
+
+
+/* Base styles - apply to all devices */
+/* ... existing styles ... */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+      background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box; /* Makes sure padding and border are included in the width */
+    margin: 10px 0; /* Adds spacing between the cards on smaller screens */
+}
+
+/* Tablets (portrait and landscape) (601px to 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px); /* Two cards per row on tablets */
+/*         margin: 10px; /* Adjust the margin to space out the cards */ */
+    }
+}
+
+/* Laptops and desktops (1025px and up) */
+@media only screen and (min-width: 1025px) {
+    .card {
+        width: calc(33.333% - 40px); /* Three cards per row on large screens */
+/*         margin: 10px; /* Adjust the margin to space out the cards */ */
+    }
+}
+
+/* Ensure the cards never become too wide on very large screens */
+/* .card {
+    max-width: 350px;
+}
+ */
+/* Add additional responsive adjustments as needed */
+/* ... */
+
+
+.profile-pic {
+    background-color: #015E7A; /* Placeholder for profile picture */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    margin: 5px 0;
+    color: #354242;
+}
+
+/* Responsive design adjustments could be added here */
+
+/* Base styles - apply to all devices */
+/* ... existing styles ... */
+
+/* Smaller devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    header h1, header nav {
+        margin-bottom: 10px;
+    }
+    
+    .cards {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+/* Tablets (portrait and landscape) (601px to 1024px) */
+
+/* ... existing styles ... */
+
+#navbar {
+    /* ... existing navbar styles ... */
+    position: relative;
+}
+
+#mobileMenuToggle {
+    display: none; /* Hidden by default */
+    font-size: 24px; /* Icon size */
+    cursor: pointer;
+}
+/* ... existing styles ... */
+
+/* ... existing styles ... */
+
+#searchContainer {
+    position: relative;
+    width: 40%;
+    margin-bottom: 20px; /* Space between search bar and cards */
+}
+/* ... existing styles ... */
+
+.search-area {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap as needed */
+    margin-bottom: 20px;
+}
+
+.search-area input[type="text"],
+.search-area .checkbox-container,
+.search-area button {
+    flex: 1; /* Allow input and button to grow */
+}
+
+/* Adjust the width as needed or set a max-width */
+.search-area input[type="text"] {
+    flex: 3; /* Text input should take more space */
+}
+
+.search-area button {
+    background-color: #017BA0;
+    color: white; /* Adjust text color as needed */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 4px; /* Adjust border-radius as needed */
+    cursor: pointer;
+}
+
+.search-area button:hover {
+    background-color: darken(#017BA0, 10%);
+}
+
+/* Checkbox label styling */
+.checkbox-label {
+    padding-left: 5px; /* Space between checkbox and label text */
+}
+
+/* ... */
+
+#searchBar {
+    width: 40%;
+    padding: 10px;
+    padding-right: 40px; /* Make room for the icon inside the search bar */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    color: #ccc;
+    pointer-events: none; /* Makes the icon non-interactive */
+}
+
+/* ... */
+
+/* ... */
+
+/* ... existing styles ... */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px; /* Maximum width */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Profile picture style inside the modal */
+.profile-pic-modal {
+  background-color: #017BA0; /* Placeholder for profile picture */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* ... */
+
+#navLinks {
+    /* ... existing #navLinks styles ... */
+}
+
+/* Mobile menu styles */
+/* Mobile menu styles */
+@media (max-width: 768px) {
+    #mobileMenuToggle {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    #navLinks {
+        display: none; /* Hide links by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below the navbar */
+        left: 0;
+        background-color: #ffffff; /* Solid white background */
+        width: 100; /* Full width */
+        border-top: 1px solid #000; /* Optional border */
+        z-index: 1000; /* Ensure it stacks on top of other content */
+    }
+
+    #navLinks a {
+        padding: 15px; /* Larger click area */
+        border-bottom: 1px solid #000; /* Optional border */
+        background-color: #ffffff; /* Ensure links have a solid white background */
+        display: block; /* Display links as block to fill the menu width */
+        color: #000; /* Text color for the links, adjust as necessary */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    /* Ensure the navLinks stay visible while open */
+    #navLinks.show {
+        display: flex;
+    }
+}
+
+/* ... */
+
+/* ... */
+
+
+/* User icon adjustments for different devices could be added here */
+/* ... */
+
