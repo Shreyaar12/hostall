@@ -16,7 +16,7 @@ header {
 
 header h1 {
     /* Applying the linear gradient to the 'Hostall' title */
-    background: linear-gradient(to right, #017BA0, #015E7A);
+      background: linear-gradient(to right, #017BA0, #3D4573); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
@@ -377,3 +377,93 @@ main {
 .form-container button:hover {
     background-color: darken(#017BA0, 10%);
 }
+
+/* User icon adjustments for different devices could be added here */
+/* ... */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Assuming full viewport height */
+    background: linear-gradient(to bottom, #017BA0, #D8EBF6);
+}
+
+.login-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Adjust as needed */
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-login {
+    background: linear-gradient(to right, #017BA0, #3D4573); /* Gradient from blue to purple */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-login:hover {
+    background: linear-gradient(to right, darken(#017BA0, 10%), darken(#3D4573, 10%)); /* Darker gradient for hover state */
+}
+
+/* Ensure you have the darken function defined or manually choose darker colors for hover */
+
+/* You may need to include a function to darken the colors for hover state or adjust the colors manually */
+
+
+.admin-login {
+    background-color: #D8EBF6;
+    color: #017BA0;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.separator {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-text a {
+    color: #017BA0;
+    text-decoration: none;
+}
+
+/* Add media queries and other styles as needed */
